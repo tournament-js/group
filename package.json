@@ -1,0 +1,24 @@
+{
+  "name": "group",
+  "description": "A fair grouping mechanism for tournaments",
+  "author": "Eirik Albrigtsen <analsandblaster@gmail.com>",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "clux/group"
+  },
+  "keywords": ["pooling", "groupstage", "fair", "algorithm"],
+  "main": "group.js",
+  "scripts": {
+    "test": "tap test/*.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "interlude": "~1.0.2",
+    "tap": "~0.4.4"
+  },
+  "bugs": {
+    "url": "http://github.com/clux/group/issues"
+  },
+  "license": "MIT"
+}
