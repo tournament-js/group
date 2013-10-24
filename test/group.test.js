@@ -37,8 +37,7 @@ test("groups", function (t) {
         var grpsClone = group(np, maxsize);
         var errModel = np + " players, groupsize " + s + " reduced to " +  maxsize;
         t.deepEqual(grps, grpsClone, "reduced model deterministically: " + errModel);
-        var numGroups = Math.ceil(np/s);
-        t.equal(group.minimalGroupSize(np, s, numGroups), maxsize, "reduce: " + s);
+        t.equal(group.minimalGroupSize(np, s), maxsize, "reduce: " + s);
       }
     });
   });

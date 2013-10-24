@@ -27,6 +27,8 @@ Best when two properties are satisfied:
 - numPlayers === groupSize*numGroups
 - groupSize % 2 === 0
 
+You should always strive to satisfy the first condition.
+
 If the `groupSize` is not even, then we cannot match up weighted pairs and the sum of seeds per group will differ by up to `numGroups`.
 
 If the `groupSize` is even, then the sum of seeds per groups are equal across all groups.
@@ -35,10 +37,10 @@ If the `groupSize` is even, then the sum of seeds per groups are equal across al
 You can check what your minimal group size will be by passing in the number of groups you want to split the players over:
 
 ```js
-group.minimalGroupSize(16, 4, 4); // 5
-group.minimalGroupSize(25, 5, 5); // 5
-group.minimalGroupSize(8, 5, 2); // 4
-group.minimalSize(numPlayers, groupSize, Math.ceil(numPlayers/groupSize)); // general
+group.minimalGroupSize(16, 4); // 5
+group.minimalGroupSize(25, 5); // 5
+group.minimalGroupSize(8, 5); // 4
+group.minimalGroupSize(numPlayers, groupSize); // general
 ```
 
 ## Installation
