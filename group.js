@@ -33,7 +33,7 @@ var group = function (numPlayers, groupSize) {
 };
 
 group.minimalGroupSize = function (numPlayers, groupSize) {
-  var numGroups = Math.ceil(numPlayers / groupSize);
+  var numGroups = arguments[2] || Math.ceil(numPlayers / groupSize);
   while (numGroups * groupSize - numPlayers >= numGroups) {
     groupSize -= 1; // while all groups have 1 free slot
   }
