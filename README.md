@@ -1,4 +1,7 @@
-# Group [![Build Status](https://secure.travis-ci.org/clux/group.png)](http://travis-ci.org/clux/group) [![Dependency Status](https://david-dm.org/clux/group.png)](https://david-dm.org/clux/group)
+# Group
+[![Build Status](https://secure.travis-ci.org/clux/group.png)](http://travis-ci.org/clux/group)
+[![Dependency Status](https://david-dm.org/clux/group.png)](https://david-dm.org/clux/group)
+[![stable](http://hughsk.github.io/stability-badges/dist/stable.svg)](http://nodejs.org/api/documentation.html#documentation_stability_index)
 
 A simple pooling algorithm for group stages, ffa style tournaments or anything else that benefits from having seeds/weighted numbers split into fair groups.
 
