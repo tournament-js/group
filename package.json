@@ -2,7 +2,7 @@
   "name": "group",
   "description": "A fair grouping mechanism for tournaments",
   "author": "Eirik Albrigtsen <analsandblaster@gmail.com>",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "stability": "stable",
   "repository": {
     "type": "git",
