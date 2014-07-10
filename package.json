@@ -3,6 +3,7 @@
   "description": "A fair grouping mechanism for tournaments",
   "author": "Eirik Albrigtsen <analsandblaster@gmail.com>",
   "version": "0.2.0",
+  "stability": "stable",
   "repository": {
     "type": "git",
     "url": "clux/group"
@@ -13,14 +14,17 @@
     "fair",
     "algorithm"
   ],
-  "main": "group.js",
+  "main": "index.js",
   "scripts": {
-    "test": "tap test/*.js"
+    "test": "$(npm bin)/nodeunit --reporter=verbose test/*.js",
+    "coveralls": "$(npm bin)/jscoverage lib && GROUP_COV=1 $(npm bin)/nodeunit --reporter=lcov test | $(npm bin)/coveralls"
   },
   "dependencies": {},
   "devDependencies": {
-    "interlude": "~1.0.2",
-    "tap": "~0.4.4"
+    "nodeunit": "~0.9.0",
+    "jscoverage": "~0.5.4",
+    "coveralls": "~2.11.1",
+    "interlude": "~1.0.2"
   },
   "bugs": {
     "url": "http://github.com/clux/group/issues"

@@ -1,9 +1,7 @@
-var tap = require('tap')
-  , test = tap.test
-  , $ = require('interlude')
+var $ = require('interlude')
   , group = require('../');
 
-test("groups", function (t) {
+exports.group = function (t) {
   var nums = $.range(100)
     , gsizes = $.range(16);
 
@@ -41,5 +39,5 @@ test("groups", function (t) {
       }
     });
   });
-  t.end();
-});
+  t.done();
+};
