@@ -1,5 +1,5 @@
 var $ = require('interlude')
-  , group = require('../');
+  , group = require(process.env.GROUP_COV ? '../group-cov.js' : '../');
 
 exports.group = function (t) {
   var nums = $.range(100)
