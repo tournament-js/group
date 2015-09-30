@@ -32,6 +32,15 @@ var group = function (numPlayers, groupSize) {
   });
 };
 
+group.fromArray = function (ary, groupSize) {
+  return group(ary.length, groupSize).map(function (group) {
+    return group.map(function (seed) {
+      return ary[seed-1];
+    });
+  })
+};
+
+
 group.minimalGroupSize = function (numPlayers, groupSize) {
   var numGroups = arguments[2] || Math.ceil(numPlayers / groupSize);
   while (numGroups * groupSize - numPlayers >= numGroups) {

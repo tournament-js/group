@@ -41,3 +41,14 @@ exports.group = function (t) {
   });
   t.done();
 };
+
+exports.fromArray = function (t) {
+  var seeds = ['a','b','c','d','e','f','g','h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p'];
+  t.deepEqual(group.fromArray(seeds, 4), [
+    [ 'a', 'e', 'l', 'p' ],
+    [ 'b', 'f', 'k', 'o' ],
+    [ 'c', 'g', 'j', 'n' ],
+    [ 'd', 'h', 'i', 'm' ]
+  ], 'array helper works');
+  t.done();
+};
