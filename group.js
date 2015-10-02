@@ -37,7 +37,7 @@ group.fromArray = function (ary, groupSize) {
     return group.map(function (seed) {
       return ary[seed-1];
     });
-  })
+  });
 };
 
 

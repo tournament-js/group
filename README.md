@@ -3,7 +3,6 @@
 [![build status](https://secure.travis-ci.org/clux/group.svg)](http://travis-ci.org/clux/group)
 [![dependency status](https://david-dm.org/clux/group.svg)](https://david-dm.org/clux/group)
 [![coverage status](http://img.shields.io/coveralls/clux/group.svg)](https://coveralls.io/r/clux/group)
-[![stable](http://img.shields.io/badge/stability-stable-74C614.svg)](http://nodejs.org/api/documentation.html#documentation_stability_index)
 
 A simple pooling algorithm for group stages, ffa style tournaments or anything else that benefits from having seeds/weighted numbers split into fair groups.
 
@@ -29,8 +28,8 @@ group(25, 5);
 ## Fairness properties
 Best when two properties are satisfied:
 
-- numPlayers === groupSize*numGroups
-- groupSize % 2 === 0
+- `numPlayers === groupSize*numGroups`
+- `groupSize % 2 === 0`
 
 You should always strive to satisfy the first condition.
 
@@ -48,11 +47,15 @@ group.minimalGroupSize(8, 5); // 4
 group.minimalGroupSize(numPlayers, groupSize); // general
 ```
 
-## Installation
-Install from npm:
+## Partitioning Helper
+If you have a pre-sorted array of seeded players, this can be passed to `group.fromArray`:
 
-```bash
-$ npm install group --save
+```js
+group.fromArray(['a','b','c','d','e','f','g','h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p'], 4)
+[ [ 'a', 'e', 'l', 'p' ],
+  [ 'b', 'f', 'k', 'o' ],
+  [ 'c', 'g', 'j', 'n' ],
+  [ 'd', 'h', 'i', 'm' ] ]
 ```
 
 ## License
