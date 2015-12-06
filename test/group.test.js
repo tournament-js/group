@@ -1,7 +1,8 @@
 var $ = require('interlude')
-  , group = require(process.env.GROUP_COV ? '../group-cov.js' : '../');
+  , group = require('..')
+  , test = require('bandage');
 
-exports.group = function (t) {
+test('group', function *(t) {
   var nums = $.range(100)
     , gsizes = $.range(16);
 
@@ -39,10 +40,9 @@ exports.group = function (t) {
       }
     });
   });
-  t.done();
-};
+});
 
-exports.fromArray = function (t) {
+test('fromArray', function *(t) {
   var seeds = ['a','b','c','d','e','f','g','h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p'];
   t.deepEqual(group.fromArray(seeds, 4), [
     [ 'a', 'e', 'l', 'p' ],
@@ -50,5 +50,4 @@ exports.fromArray = function (t) {
     [ 'c', 'g', 'j', 'n' ],
     [ 'd', 'h', 'i', 'm' ]
   ], 'array helper works');
-  t.done();
-};
+});
