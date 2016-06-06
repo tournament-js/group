@@ -41,7 +41,7 @@ If the `groupSize` is even, then the sum of seeds per groups are equal across al
 You can check what your minimal group size will be by passing in the number of groups you want to split the players over:
 
 ```js
-group.minimalGroupSize(16, 4); // 5
+group.minimalGroupSize(16, 4); // 4
 group.minimalGroupSize(25, 5); // 5
 group.minimalGroupSize(8, 5); // 4
 group.minimalGroupSize(numPlayers, groupSize); // general
